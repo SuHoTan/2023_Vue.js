@@ -1,0 +1,32 @@
+<!--CDN으로 쉽게 Vue 기능을 사용할 수 있다-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CDN Vue</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <h2>클릭하면 카운터 Up!</h2>
+        <div id="app">
+            <p> {{count}} 회</p>
+            <button v-on:click="countUp">카운터</button>
+        </div>
+    </body>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data : {
+                count:0
+            },
+            methods: {
+                countUp: function() {
+                    this.count++;
+                }
+            }
+        })
+    </script>
+</html>
